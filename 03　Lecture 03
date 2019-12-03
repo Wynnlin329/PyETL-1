@@ -12,7 +12,6 @@ res=request.urlopen(req)
 #以BeautifulSoup將所獲訊息(res)進行解碼，且可被定位
 soup=BeautifulSoup(res,"html.parser")
 
-
 #前者僅印出首項、後者以清單型態展列，有保留字問題
 target1=soup.find("div",id="main-container")
 print(target1)
@@ -31,7 +30,6 @@ req=request.Request(url=url,headers=headers)
 res=request.urlopen(req)
 #以BeautifulSoup將所獲訊息(res)進行解碼，且可被定位
 soup=BeautifulSoup(res,"html.parser")
-
 
 #前者僅印出首項、後者以清單型態展列，無保留字問題
 target3=soup.find("div",{"id":"main-container"})
@@ -52,7 +50,6 @@ res=request.urlopen(req)
 #以BeautifulSoup將所獲訊息(res)進行解碼，且可被定位
 soup=BeautifulSoup(res,"html.parser")
 
-
 #前者僅印出首項、後者以清單型態展列，有保留字問題
 target5=soup.select_one('div[id="action-bar-container"]')
 print(target5)
@@ -71,7 +68,6 @@ req=request.Request(url=url,headers=headers)
 res=request.urlopen(req)
 #以BeautifulSoup將所獲訊息(res)進行解碼，且可被定位
 soup=BeautifulSoup(res,"html.parser")
-
 
 #find已是單值物件，直接.div即可取出內層標籤
 target1=soup.find("div",id="main-container")
@@ -95,7 +91,6 @@ req=request.Request(url=url,headers=headers)
 res=request.urlopen(req)
 #以BeautifulSoup將所獲訊息(res)進行解碼，且可被定位
 soup=BeautifulSoup(res,"html.parser")
-
 
 #find已是單值物件，直接.div即可取出內層標籤
 target1=soup.find("div",id="main-container")
@@ -121,7 +116,6 @@ req=request.Request(url=url, headers=headers)
 res=request.urlopen(req)
 #以BeautifulSoup將所獲訊息(res)進行解碼，且可被定位
 soup=BeautifulSoup(res,"html.parser")
-
 
 #find已是單值物件，直接.div即可取出內層標籤
 target1=soup.find("div",id="main-container")
